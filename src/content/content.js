@@ -67,30 +67,12 @@ export default {
   ],
   about:
     "An active minimalist, likes to work async, meet new people & tell stories - still learning how to tell good ones.",
-  card_legends: [
-    {
-      card_key: "intro",
-      legend_text: "TL:DR",
-    },
-    {
-      card_key: "contact",
-      legend_text: "Go ahead, send that message!",
-    },
-    {
-      card_key: "work_experience",
-      legend_text: "The journey so far",
-    },
-    {
-      card_key: "side_gigs",
-      legend_text: "Check it out!",
-    },
-    {
-      card_key: "interests",
-      legend_text: "SEO keywords for his brain",
-    },
-    {
-      card_key: "about",
-      legend_text: "No one asked but, that’s him",
-    },
-  ],
+  card_legends: {
+      intro: "TL:DR",
+      contact: "Go ahead, send that message!",
+      work_experience: "The journey so far",
+      side_gigs: "Check it out!",
+      interests: "SEO keywords for his brain",
+      about: "No one asked but, that’s him",
+  },
 };
