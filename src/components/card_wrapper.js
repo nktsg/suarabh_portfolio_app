@@ -4,11 +4,11 @@ import Card from "./card";
 const StyledCardWrapper = styled.div`
   border-radius: 24px;
   padding: 4px 4px 0px;
-  background: rgba(255, 255, 255, 0.2);
+  background: ${(props) => props.background || "#ffffff33"};
   display: flex;
   flex-direction: column;
   width: 448px;
-  height: 377px;
+  margin-top: ${(props) => props.marginTop || "0px"};
 `;
 
 const Legend = styled.p`
@@ -22,12 +22,17 @@ const Legend = styled.p`
   padding: 0 36px;
 `;
 
-export default function CardWrapper({ children }) {
+export default function CardWrapper({
+  legend,
+  marginTop,
+  background,
+  children,
+}) {
   return (
     <>
-      <StyledCardWrapper>
+      <StyledCardWrapper marginTop={marginTop} background={background}>
         <Card>{children}</Card>
-        <Legend>TL:DR</Legend>
+        <Legend>{legend}</Legend>
       </StyledCardWrapper>
     </>
   );
