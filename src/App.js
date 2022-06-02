@@ -7,6 +7,7 @@ import SideGigCard from "./components/cards/side_gigs";
 import InterestsCard from "./components/cards/interests";
 import AboutCard from "./components/cards/about";
 import ContactCard from "./components/cards/contact";
+import "@fontsource/inter";
 
 // import siteBackgroundImage from "./images/site_background_image.png";
 
@@ -25,31 +26,32 @@ export default function App() {
   return (
     <>
       {/* <StyledContainer siteBackgroundImage={siteBackgroundImage}> */}
-        <CardWrapper legend={content.card_legends.intro}>
-          <IntroCard intro={content.intro} contacts={content.contact} />
-        </CardWrapper>
-        <CardWrapper
-          legend={content.card_legends.work_experience}
-          marginTop={"36px"}
-        >
-          <WorkExperienceCard workExperience={content.work_experience} />
-        </CardWrapper>
-        <CardWrapper legend={content.card_legends.side_gigs} marginTop={"36px"}>
-          <SideGigCard sideGigs={content.side_gigs} />
-        </CardWrapper>
-        <CardWrapper legend={content.card_legends.interests} marginTop={"36px"}>
-          <InterestsCard interests={content.interests} />
-        </CardWrapper>
-        <CardWrapper legend={content.card_legends.about} marginTop={"36px"}>
-          <AboutCard about={content.about} />
-        </CardWrapper>
-        <CardWrapper
-          legend={content.card_legends.contact}
-          marginTop={"36px"}
-          background={"#121212"}
-        >
-          <ContactCard contacts={content.contact} />
-        </CardWrapper>
+      <CardWrapper legend={content.card_legends.intro}>
+        <IntroCard intro={content.intro} contacts={content.contact} />
+      </CardWrapper>
+      <CardWrapper
+        legend={content.card_legends.work_experience}
+        marginTop={"36px"}
+        gap={"24px"}
+      >
+        <WorkExperienceCard workExperience={content.work_experience} />
+      </CardWrapper>
+      <CardWrapper legend={content.card_legends.side_gigs} marginTop={"36px"}>
+        <SideGigCard sideGigs={content.side_gigs} />
+      </CardWrapper>
+      <CardWrapper legend={content.card_legends.interests} marginTop={"36px"}>
+        <InterestsCard interests={content.interests} />
+      </CardWrapper>
+      <CardWrapper legend={content.card_legends.about} marginTop={"36px"}>
+        <AboutCard about={content.about} />
+      </CardWrapper>
+      <CardWrapper
+        legend={content.card_legends.contact}
+        marginTop={"36px"}
+        background={"#121212"}
+      >
+        <ContactCard contacts={content.contact} />
+      </CardWrapper>
       {/* </StyledContainer> */}
     </>
   );

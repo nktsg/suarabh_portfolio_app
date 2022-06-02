@@ -27,11 +27,12 @@ export default function CardWrapper({
   marginTop,
   background,
   children,
+  gap,
 }) {
   return (
     <>
       <StyledCardWrapper marginTop={marginTop} background={background}>
-        <Card>{children}</Card>
+        <Card gap={gap}>{children}</Card>
         <Legend>{legend}</Legend>
       </StyledCardWrapper>
     </>

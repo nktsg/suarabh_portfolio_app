@@ -6,9 +6,9 @@ const StyledCard = styled.div`
   padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: ${(props) => props.gap || "24px"};
 `;
 
-export default function Card({ children }) {
-  return <StyledCard>{children}</StyledCard>;
+export default function Card({ children, gap }) {
+  return <StyledCard gap={gap}>{children}</StyledCard>;
 }

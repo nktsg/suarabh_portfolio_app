@@ -23,4 +23,5 @@ export const ContactTitle = styled(ContactText)`
 export const ContactAddress = styled(ContactText)`
   font-weight: 500;
   letter-spacing: -0.03em;
+  opacity: 0.5;
 `;

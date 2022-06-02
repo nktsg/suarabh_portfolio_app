@@ -16,15 +16,22 @@ const WorkExpText = styled.p`
 const Organisation = styled(WorkExpText)`
   font-weight: 600;
   font-size: 20px;
+  margin: 0px;
 `;
 
 const RoleAndCategory = styled(WorkExpText)`
   font-weight: 500;
   font-size: 14px;
   opacity: 0.5;
+  margin: 0px;
 `;
 
-const Year = styled(WorkExpText)``;
+const Year = styled(WorkExpText)`
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 0.5;
+  margin: 0px;
+`;
 
 export default function WorkExperienceCard({ workExperience }) {
   return (
