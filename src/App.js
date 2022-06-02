@@ -7,6 +7,7 @@ import SideGigCard from "./components/cards/side_gigs";
 import InterestsCard from "./components/cards/interests";
 import AboutCard from "./components/cards/about";
 import ContactCard from "./components/cards/contact";
+
 // import siteBackgroundImage from "./images/site_background_image.png";
 
 // const StyledContainer = styled.div`
