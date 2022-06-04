@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Card from "./card";
 
-const StyledCardWrapper = styled.div`
+const StyledCardWrapper = styled.div.attrs(() => ({ tabIndex: 0 }))`
   border-radius: 24px;
   padding: 4px 4px 0px;
   background: ${(props) => props.background || "#ffffff33"};
@@ -9,6 +9,19 @@ const StyledCardWrapper = styled.div`
   flex-direction: column;
   width: 448px;
   margin-top: ${(props) => props.marginTop || "0px"};
+
+  transform-origin: 0 0;
+  transform: translateX(24px) translateY(24px) scale(0.8);
+  opacity: 0;
+
+  transition-property: transform, opacity;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+
+  &:hover {
+    transform: translateX(-24px) translateY(-24px) scale(1);
+    opacity: 100%;
+  }
 `;
 
 const Legend = styled.p`
@@ -31,7 +44,11 @@ export default function CardWrapper({
 }) {
   return (
     <>
-      <StyledCardWrapper marginTop={marginTop} background={background}>
+      <StyledCardWrapper
+        marginTop={marginTop}
+        background={background}
+        className="something"
+      >
         <Card gap={gap}>{children}</Card>
         <Legend>{legend}</Legend>
       </StyledCardWrapper>
