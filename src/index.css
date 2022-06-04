@@ -14,7 +14,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  animation: appear 2000ms ease-in;
+  animation: appear 1.5s ease-in;
   animation-iteration-count: 1;
 }
 

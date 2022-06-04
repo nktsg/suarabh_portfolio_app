@@ -15,13 +15,13 @@ const StyledCardWrapper = styled.div.attrs(() => ({ tabIndex: 0 }))`
   opacity: 0;
 
   transition-property: transform, opacity;
-  transition-duration: 1s;
+  transition-duration: 1.5s;
   transition-timing-function: ease;
 
-  &:hover {
-    transform: translateX(-24px) translateY(-24px) scale(1);
-    opacity: 100%;
-  }
+  // &:hover {
+  //   transform: translateX(-24px) translateY(-24px) scale(1);
+  //   opacity: 100%;
+  // }
 `;
 
 const Legend = styled.p`
@@ -47,7 +47,7 @@ export default function CardWrapper({
       <StyledCardWrapper
         marginTop={marginTop}
         background={background}
-        className="something"
+        className="card_wrapper card_wrapper_transition"
       >
         <Card gap={gap}>{children}</Card>
         <Legend>{legend}</Legend>

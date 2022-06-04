@@ -8,7 +8,9 @@ import InterestsCard from "./components/cards/interests";
 import AboutCard from "./components/cards/about";
 import ContactCard from "./components/cards/contact";
 import "@fontsource/inter";
+import "./App.css";
 
+import { useEffect } from "react";
 // import siteBackgroundImage from "./images/site_background_image.png";
 
 // const StyledContainer = styled.div`
@@ -23,6 +25,28 @@ import "@fontsource/inter";
 // `;
 
 export default function App() {
+  useEffect(() => {
+    const cardWrappers = document.querySelectorAll(".card_wrapper");
+    cardWrappers.forEach((cw) => {
+      cw.classList.remove("card_wrapper_transition");
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateX(-24px) translateY(-24px) scale(1)";
+          // entry.target.classList.add("card_wrapper_transition");
+          return;
+        }
+      });
+    });
+
+    document.querySelectorAll(".card_wrapper").forEach((cw) => {
+      observer.observe(cw);
+    });
+  });
+
   return (
     <>
       {/* <StyledContainer siteBackgroundImage={siteBackgroundImage}> */}

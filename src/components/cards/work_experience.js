@@ -41,7 +41,7 @@ export default function WorkExperienceCard({ workExperience }) {
           <WorkExperienceWrapper>
             <div>
               <Organisation>{workExp.organisation}</Organisation>
-              <RoleAndCategory>{`${workExp.role} U+00B7 ${workExp.category}`}</RoleAndCategory>
+              <RoleAndCategory>{`${workExp.role} \u{00B7} ${workExp.category}`}</RoleAndCategory>
             </div>
             <div>
               <Year>{workExp.year}</Year>

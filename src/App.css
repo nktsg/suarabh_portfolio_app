@@ -1,0 +1,6 @@
+@media (prefers-reduced-motion: no-preference) {
+  .card_wrapper_transition {
+    transform: translateX(-24px) translateY(-24px) scale(1);
+    opacity: 1;
+  }
+}

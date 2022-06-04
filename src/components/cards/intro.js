@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ContactArrowIcon from "../contact_item_arrow";
 import { ContactItem } from "./contact_item";
 import { ContactTitle } from "./contact_item";
 import { ContactAddress } from "./contact_item";
@@ -18,11 +19,20 @@ export default function IntroCard({ intro, contacts }) {
     <>
       <Intro>{intro}</Intro>
       <ContactItem>
-        <ContactTitle>{`${contacts[0].title} ↗️`}</ContactTitle>
+        <ContactTitle>
+          {`${contacts[0].title}`}
+          <span dangerouslySetInnerHTML={{ __html: "&nbsp; &nbsp;" }} />
+          <ContactArrowIcon />
+        </ContactTitle>
         <ContactAddress>{contacts[0].address}</ContactAddress>
       </ContactItem>
       <ContactItem marginTop="-16px">
-        <ContactTitle>{`${contacts[1].title} ↗️`}</ContactTitle>
+        <ContactTitle>
+          {`${contacts[1].title}`}
+          <span dangerouslySetInnerHTML={{ __html: "&nbsp; &nbsp;" }} />
+          <ContactArrowIcon />
+        </ContactTitle>
+        <span dangerouslySetInnerHTML={{ __html: "&nbsp; &nbsp;" }} />
         <ContactAddress>{contacts[1].address}</ContactAddress>
       </ContactItem>
     </>
